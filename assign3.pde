@@ -262,10 +262,12 @@ void mousePressed(){
           }      
           break; 
            
-       case SLOT_FLAG: 
+       case SLOT_FLAG:
+          if (flagCount <= bombCount){ 
               showSlot(flagCol, flagRow, SLOT_OFF); 
               slot[flagCol][flagRow] = SLOT_OFF; 
-              flagCount--;         
+              flagCount--;   
+          }      
           break; 
     
        case SLOT_BOMB: 
@@ -277,12 +279,14 @@ void mousePressed(){
           break; 
   
        case SLOT_FLAG_BOMB:
+          if (flagCount <= bombCount){
               showSlot(flagCol, flagRow, SLOT_OFF);  
               slot[flagCol][flagRow] = SLOT_BOMB;  
               flagCount--; 
+          }
               break; 
     }
-       
+
   } 
     // -------------------------
 }
