@@ -32,7 +32,7 @@ PImage bomb, flag, cross ,bg;
 
 void setup(){
   size (640,480);
-  textFont( createFont("font/Square_One.ttf",24) , 24);
+  textFont( createFont("font/Square_One.ttf",18) , 18);
   bomb=loadImage("data/bomb.png");
   flag=loadImage("data/flag.png");
   cross=loadImage("data/cross.png");
@@ -57,7 +57,7 @@ void draw(){
     case GAME_START:
           background(180);
           image(bg,0,0,640,480);
-          textFont( createFont("font/Square_One.ttf",24) , 24);
+          textFont( createFont("font/Square_One.ttf",18) , 18);
           fill(0);
           text("Choose # of bombs to continue:",10,width/3-24);
           int spacing = width/9;
@@ -77,7 +77,7 @@ void draw(){
           // -----------------------------------
           break;
     case GAME_WIN:
-          textFont( createFont("font/Square_One.ttf",24) , 24);
+          textFont( createFont("font/Square_One.ttf",18) , 18);
           fill(0);
           text("YOU WIN !!",width/3,30);    
           // -----------------------------------
@@ -88,7 +88,7 @@ void draw(){
           // -----------------------------------
           break;
     case GAME_LOSE:
-          textFont( createFont("font/Square_One.ttf",24) , 24);
+          textFont( createFont("font/Square_One.ttf",18) , 18);
           fill(0);
           text("YOU LOSE !!",width/3,30);
           // -----------------------------------          
